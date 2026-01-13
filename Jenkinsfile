@@ -21,7 +21,7 @@ pipeline {
                     // Ensure the Docker daemon is running
                     sh 'docker info'
                 }
-                sh "docker compose -f ${DOCKER_COMPOSE_PATH} up -d --build"
+                sh "docker-compose -f ${DOCKER_COMPOSE_PATH} up -d --build"
             }
         }
     }
